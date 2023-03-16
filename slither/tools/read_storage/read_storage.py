@@ -232,6 +232,7 @@ class SlitherReadStorage:
         slot_info.value = self.convert_value_to_type(
             hex_bytes, slot_info.size, slot_info.offset, slot_info.type_string
         )
+        slot_info.value = str(slot_info.value)
         logger.info(f"\nValue: {slot_info.value}\n")
 
     def get_all_storage_variables(self, func: Callable = None) -> None:
